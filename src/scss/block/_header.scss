@@ -1,0 +1,81 @@
+.header {
+  position: absolute;
+  width: 100%;
+  background: $dark;
+  color: #FFFFFF;
+  padding: 24px 0 22px;
+  z-index: 5;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-family: 'FuturaDemiC', sans-serif;
+    color: $primary;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+  }
+
+  &__phone {
+    font-family: FuturaDemiC;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #E3B873;
+    margin-right: 45px;
+
+    @include tablets {
+      margin-right: 0;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+
+  &__order {
+    padding: 13px 22px;
+
+    @include tablets {
+      display: none;
+    }
+  }
+}
+
+
+.logo {}
+
+.nav {
+  @include small-desctop {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+
+    li {
+      line-height: 16px;
+      text-transform: uppercase;
+
+      a {
+        transition: color .5s;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      +li {
+        margin-left: 40px;
+      }
+    }
+  }
+}

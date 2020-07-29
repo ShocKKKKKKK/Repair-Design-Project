@@ -1,0 +1,42 @@
+.section {
+  &__descr {
+    max-width: 741px;
+  }
+}
+
+.design {
+  @include tablets {
+    background: $dark;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  .section {
+
+
+    &__heading {
+      @include tablets {
+        color: $white;
+      }
+    }
+
+
+    &__descr {
+      max-width: 741px;
+
+      @include tablets {
+        max-width: 500px;
+        color: $white;
+      }
+    }
+  }
+
+  .card {
+
+    &__price {
+      padding: 17px 68px 17px 33px;
+    }
+  }
+}

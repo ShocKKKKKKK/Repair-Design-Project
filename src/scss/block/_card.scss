@@ -1,0 +1,58 @@
+.card {
+  position: relative;
+
+  &__img {}
+
+  &__content {
+    max-width: 330px;
+    background: $white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    margin: -128px auto 0;
+    padding: 25px 30px;
+    position: relative;
+
+    @include phones {
+      max-width: 270px;
+      margin: -128px 0 0;
+      padding: 20px 30px;
+    }
+  }
+
+  &__title {
+    font-family: 'Yeseva One';
+    font-size: 18px;
+    line-height: 25px;
+    color: #363636;
+    margin-bottom: 11px;
+  }
+
+  &__list {
+    list-style: disc;
+    padding-left: 16px;
+    margin-bottom: 55px;
+
+    @include phones {
+      margin-bottom: 37px;
+    }
+  }
+
+  &__price {
+    position: absolute;
+    font-family: 'Yeseva One';
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $primary;
+    padding: 17px 18px;
+    left: 0;
+    bottom: -26px;
+  }
+
+  &__item {
+    font-size: 15px;
+    line-height: 25px;
+    color: #959595;
+  }
+}

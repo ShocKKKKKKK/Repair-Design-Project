@@ -1,0 +1,11 @@
+.types {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__card {
+    @include tablets {
+      margin-bottom: 60px;
+    }
+  }
+}

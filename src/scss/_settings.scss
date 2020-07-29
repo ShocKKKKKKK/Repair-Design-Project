@@ -1,0 +1,117 @@
+.container {
+  max-width: 1286px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  font-family: 'FuturaDemiC';
+  font-weight: 500;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: $primary;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  border-radius: 2px;
+  transition: box-shadow .5s;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+}
+
+.section {
+  &--dark {
+    background-color: $dark;
+    color: $white;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__heading {
+    font-family: Yeseva One;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+
+    color: $white;
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    &::after,
+    &::before {
+      content: '';
+      width: 32px;
+      height: 2px;
+      border-radius: 30px;
+      background: #E3B873;
+      margin: 0 10px;
+    }
+  }
+}
+
+
+.section {
+  &__title {}
+
+  &__heading {
+    font-family: 'Yeseva One';
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #181818;
+    margin-bottom: 12px;
+  }
+
+  &__img {}
+
+  &__descr {
+    margin-top: 23px;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #363636;
+    margin: 0 auto;
+
+    @include tablets {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
+
+
+.to-top {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #E3B873;
+  border-radius: 50%;
+  background: #131313 url(../images/icon/down-arrow.svg) no-repeat center;
+  transform: rotate(180deg);
+  cursor: pointer;
+  z-index: 1;
+}

@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+
+  @include desctop {
+    font-size: 15px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-size: 14px;
+  height: 100%;
+  position: relative;
+  font-family: 'FuturaBookC', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img{
+  max-width: 100%;
+}
+button:focus,
+input:focus {
+  outline: transparent;
+}
+
+ul {
+  list-style: none;
+}

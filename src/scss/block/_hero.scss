@@ -1,0 +1,175 @@
+.hero {
+  padding: 100px 0;
+  background: $dark url(../../images/bg/hero.jpg)center center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: $dark;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  &__instagram {
+    max-width: 80px;
+    background: $dark;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    @include small-desctop {
+      display: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+    max-width: 550px;
+    width: 100%;
+    margin-left: 80px;
+
+    @include small-desctop {
+      margin-left: 60px;
+    }
+
+    @include tablets {
+      width: auto;
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    font-family: 'Yeseva One';
+    font-size: 40px;
+    line-height: 53px;
+    text-transform: uppercase;
+    color: $white;
+    margin-bottom: 20px;
+
+    @include tablets {
+      font-size: 23px;
+      line-height: 31px;
+      margin-bottom: 16px;
+    }
+
+    span {
+      color: $primary;
+    }
+  }
+
+  &__descr {
+    color: $white;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 40px;
+
+    @include tablets {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+
+    @include phones {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    padding: 18px 26px;
+
+    &:first-child {
+      margin-right: 20px;
+
+      @include phones {
+        margin-right: 0px;
+        margin-bottom: 26px;
+      }
+    }
+  }
+}
+
+.instagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'FuturaDemiC', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: $primary;
+    transform: rotate(90deg);
+
+    &::after {
+      content: '';
+      width: 50px;
+      height: 2px;
+      background: $primary;
+      margin-left: 8px;
+    }
+  }
+}
+
+.scroll-down {
+  width: 247px;
+  height: 97px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Yeseva One';
+  font-size: 12px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: $white;
+  background: $dark;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  @include phones {
+    display: none;
+  }
+
+  &::after {
+    content: '';
+    margin-left: 12px;
+    width: 29px;
+    height: 29px;
+    border: 1.5px solid $primary;
+    background: url(../images/icon/down-arrow.svg) center no-repeat;
+    border-radius: 50%;
+  }
+}
